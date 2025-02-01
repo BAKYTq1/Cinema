@@ -1,8 +1,11 @@
 import  'react'
 import './style.css'
 import { SiYoutubemusic } from "react-icons/si";
+import SignIn from '../components/sign in/SignIn';
+// import MovieList from './Cinema';
 function Home() {
   return (
+    <>
     <main>
       <section>
         <div className='Home'>
@@ -18,6 +21,9 @@ function Home() {
         </div>
       </section>
     </main>
+    {/* <MovieList /> */}
+    <SignIn/>
+    </>
   )
 }
 
