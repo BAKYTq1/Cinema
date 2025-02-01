@@ -65,3 +65,108 @@ border-radius: 36px;
     font-size: 16px;
     font-weight: 500;
 }
+
+.block-info{
+    text-align: center;
+}
+.orange{
+    color: #EF4234;
+}
+.bg-red{
+    background-color: var(--color-red-500);
+}
+/* Основной контейнер */
+.con{
+    position: relative;
+    width: 1174px;
+    margin: 0 auto;
+  }
+  
+  /* Обертка для слайдов */
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Контейнер для слайдов */
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Отдельный слайд */
+  .slide {
+    padding: 8px;
+    width: 390px; /* Фиксированная ширина для стабильного размера */
+    flex-shrink: 0;
+    box-sizing: border-box; /* Учитываем паддинги в размере */
+  }
+  
+  /* Карточка фильма */
+  .card {
+    background-color: black;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    position: relative;
+    margin: 0 auto;
+    height: 100%; /* Равномерная высота */
+  }
+  
+  /* Рейтинг */
+  .rating {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  /* Постер */
+  .poster {
+    border-radius: 6px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 300px; /* Фиксированная высота постера */
+    object-fit: cover; /* Сохранение пропорций */
+  }
+  
+  /* Название фильма */
+  .movie-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Год выпуска */
+  .movie-year {
+    color: gray;
+  }
+  
+  /* Кнопки навигации */
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background-color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .nav-button.left {
+    left: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .nav-button.right {
+    right: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  

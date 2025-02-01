@@ -2,6 +2,7 @@ import 'react'
 import { VscAccount } from "react-icons/vsc";
 // import logo from '../img/Ellipse 101'
 import './style.css'
+import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header>
@@ -17,7 +18,10 @@ function Header() {
             <div className='header-icon'>
                 <h3>EN</h3>
                 <div>
+                  <Link to='signup'>
                 <VscAccount />
+                  
+                  </Link>
                 </div>
                 
             </div>
