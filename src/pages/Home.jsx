@@ -1,8 +1,10 @@
 import  'react'
 import './style.css'
 import { SiYoutubemusic } from "react-icons/si";
+import Home2 from './Home2'
 function Home() {
   return (
+    <>
     <main>
       <section>
         <div className='Home'>
@@ -18,6 +20,8 @@ function Home() {
         </div>
       </section>
     </main>
+    <Home2 />
+    </>
   )
 }
 
