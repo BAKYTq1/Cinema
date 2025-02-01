@@ -1,6 +1,8 @@
 import React from 'react'
 import './SigneUp.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import SignIn from './sign in/SignIn';
 
 function SigneUp() {
     const [login, setLogin] = useState('');
@@ -45,47 +47,45 @@ function SigneUp() {
   <div className='registration-container-info'>
     <div>
         <h1>Регистрация</h1>
-        <h2>Зарегистрируйтесь, чтобы
-        получить доступ ко всем преимуществам нашей платформы. Уже есть аккаунт?</h2>
+        <h2>Зарегистрируйтесь, чтобы <br />
+        получить доступ ко всем преимуществам <br /> нашей платформы. Уже есть аккаунт?</h2>
        
     </div>
-         <button>Войти</button>
+    <Link to={'../signin'}><button>Войти</button></Link>
+         
   </div>
 
     <div className="registration-container">
     <h2>Создать аккаунт</h2>
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Логин</label>
-        <input
+           <input
           type="text"
           value={login}
           onChange={(e) => setLogin(e.target.value)}
-          required
+          required placeholder='Логин'
           />
       </div>
       <div>
-        <label>E-mail</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
+          required placeholder='E-mail'
           />
       </div>
       <div>
-        <label>Пароль</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
+          required placeholder='Пароль'
           />
       </div>
       <button type="submit">Зарегистрироваться</button>
     </form>
     <p>
-      Уже есть аккаунт? <a href="/login">Войти</a>
+      Уже есть аккаунт? <Link to="../signin">Войти</Link>
     </p>
   </div>
 

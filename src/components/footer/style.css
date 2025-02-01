@@ -28,18 +28,19 @@ footer{
         height: 26px;
         display: flex;
         align-items: center;
+        cursor: pointer;
         justify-content: center;
         border-radius: 50%;
         background-color: #EF4234;
     }
 }
 .footer-div div h1 {
-    margin-top: 17px;
     font-size: 16px;
 }
 .footer ul button {
     width: 142px;
     height: 33px;
+    cursor: pointer;
     border-radius: 36px;
     background-color: #EF4234;
     border: none;

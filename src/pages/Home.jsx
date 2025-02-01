@@ -2,8 +2,8 @@ import  'react'
 import './style.css'
 import { SiYoutubemusic } from "react-icons/si";
 import SignIn from '../components/sign in/SignIn';
-// import MovieList from './Cinema';
 import Home2 from './Home2'
+// import MovieList from './Cinema';
 function Home() {
   return (
     <>
@@ -23,7 +23,7 @@ function Home() {
       </section>
     </main>
     {/* <MovieList /> */}
-    <SignIn/>
+    {/* <SignIn/> */}
     <Home2 />
     </>
   )
