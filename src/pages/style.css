@@ -1,0 +1,67 @@
+main{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+  background-image: url('../img/Rectangle 176.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+    width: 100%;
+height: 799px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+section{
+    width: 1440px;
+height: 799px;
+margin: 0 auto;
+}
+.Home{
+    width: 507px;
+height: 269.66px;
+margin-left: 171px;
+margin-top: 265.22px;
+&& div:nth-child(1){
+    text-align: left;
+    display: flex;
+    /* justify-content: center; */
+    gap: 20px;
+    color: #979797;
+font-size: 16px;
+font-weight: 400;
+}
+&& div h2:nth-child(2){
+    font-weight: 50;
+}
+}
+.Home-J h1{
+    margin-top: 13px;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 48.76px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none; 
+}
+.Home-J p{
+font-size: 18px;
+font-weight: 500;
+line-height: 28.87px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}   
+.Home button {
+    width:151px;
+height: 50px;
+border-radius: 36px;
+    background-color: #EF4234;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
