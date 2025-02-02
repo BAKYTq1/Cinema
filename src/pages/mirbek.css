@@ -147,3 +147,7 @@
 .display-none{
     display: none;
 }
+.bg-i{
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,68 @@
+.comedy-movies {
+    padding: 20px;
+  }
+  
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+
+  }
+  
+  .movie-card {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .movie-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  .movie-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 1;
+    border: #EF4234 1px solid;
+    color: #EF4234;
+  }
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #EF4234;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 4;
+    position: absolute;
+    top: 50px;
+    position: sticky;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+
+ 
+
+  }
+  
+  .back-button:hover {
+    background-color: #ef4134eb;
+  }
