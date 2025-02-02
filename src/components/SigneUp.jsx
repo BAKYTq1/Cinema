@@ -1,99 +1,98 @@
-import React from 'react'
-import './SigneUp.css'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import './SigneUp.css';
+import { useNavigate } from 'react-router-dom';
 
 function SigneUp() {
-    const [login, setLogin] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-  
-    const handleSubmit = (event) => {
-        event.preventDefault();
-    
+  const [formData, setFormData] = useState({
+    username: '',
+    lastName: '',
+    email: '',
+    password: ''
+  });
 
-        const user = {
-          login,
-          email,
-          password,
-        };
-    
+  const navigate = useNavigate();
 
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-    
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-        const userExists = users.some((u) => u.email === email);
-        if (userExists) {
-          alert('Пользователь с таким email уже зарегистрирован!');
-          return;
-        }
-    
-
-        users.push(user);
-    
-        localStorage.setItem('users', JSON.stringify(users));
-    
-
-        setLogin('');
-        setEmail('');
-        setPassword('');
-    
-        alert('Регистрация прошла успешно!');
-      };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem('registrationData', JSON.stringify(formData));
+    alert('Регестрация прошла успешно')
+  };
   return (
     <>
-    <div className='big-div'>
-  <div className='registration-container-info'>
-    <div>
-        <h1>Регистрация</h1>
-        <h2>Зарегистрируйтесь, чтобы
-        получить доступ ко всем преимуществам нашей платформы. Уже есть аккаунт?</h2>
-       
-    </div>
-         <button>Войти</button>
-  </div>
-
-    <div className="registration-container">
-    <h2>Создать аккаунт</h2>
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Логин</label>
-        <input
-          type="text"
-          value={login}
-          onChange={(e) => setLogin(e.target.value)}
-          required
-          />
-      </div>
-      <div>
-        <label>E-mail</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          />
-      </div>
-      <div>
-        <label>Пароль</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          />
-      </div>
-      <button type="submit">Зарегистрироваться</button>
-    </form>
-    <p>
-      Уже есть аккаунт? <a href="/login">Войти</a>
-    </p>
-  </div>
-
+      <div className='big-div'>
+        <div className='registration-container-info'>
+          <div>
+            <h1>Регистрация</h1>
+            <h2>Зарегистрируйтесь, чтобы получить доступ ко всем преимуществам нашей платформы. Уже есть аккаунт?</h2>
           </div>
-          </>
+          <button>Войти</button>
+        </div>
 
-    
-  )
+        <div className="registration-container">
+          <h2>Создать аккаунт</h2>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Логин</label>
+              <input
+                 type="text" 
+                 name="username" 
+                 placeholder="Имя пользователя" 
+                 value={formData.username} 
+                 onChange={handleChange} 
+                 required
+              />
+            </div>
+            <div>
+              <label>Фамилия</label>
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Фамилия"
+                required
+                value={formData.lastName}
+                onChange={handleChange}
+                
+              />
+            </div>
+            <div>
+              <label>E-mail</label>
+              <input
+               type="email" 
+               name="email" 
+               placeholder="Email" 
+               value={formData.email} 
+               onChange={handleChange} 
+               required 
+              />
+            </div>
+            <div>
+              <label>Пароль</label>
+              <input
+                 type="password" 
+                 name="password" 
+                 placeholder="Пароль" 
+                 value={formData.password} 
+                 onChange={handleChange} 
+                 required 
+              />
+
+            </div>
+            <button type="submit">Зарегистрироваться</button>
+          </form>
+          <p>
+            Уже есть аккаунт? <a href="#">Войти</a>
+          </p>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default SigneUp
+export default SigneUp;
