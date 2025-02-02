@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SigneUp.css';
 import { Link, useNavigate } from 'react-router-dom';
-import SignIn from './sign in/SignIn';
+import SignIn from '../sign in/SignIn';
 
 function SigneUp() {
   const [formData, setFormData] = useState({

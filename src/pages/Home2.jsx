@@ -3,6 +3,8 @@ import { FaSearch } from "react-icons/fa";
 import { Cinema } from '../data/Cinema';
 import { useState, useEffect } from 'react';
 import './mirbek.css'
+import { Link } from 'react-router-dom';
+
 
 
 function Home2() {
@@ -47,6 +49,9 @@ function Home2() {
     const prevSlide = () => {  
       setCurrentIndex((prevIndex) => (prevIndex - 1 + (Cinema.length - slidesToShow + 1)) % (Cinema.length - slidesToShow + 1));  
     };  
+
+
+   
   return (
     
     <>
@@ -62,18 +67,24 @@ function Home2() {
     <h1 className="main-title">Смотрите фильмы, которые вам нравятся</h1>
     <p className="description">На нашем сайте собрано огромное количество фильмов и сериалов на любой вкус</p>
     <div className="genre-cards">
+      <Link to='filter/drama'>
         <div className="genre-card">
             <h1 className="genre-title">Драма</h1>
             <h2 className="genre-count">120k+ фильмов</h2>
         </div>
+      </Link>
+        <Link to='filter/horror'>
         <div className="genre-card">
             <h1 className="genre-title">Ужасы</h1>
             <h2 className="genre-count">100k+ фильмов</h2>
-        </div>    
+        </div>  
+        </Link>
+        <Link to='filter/comedy'>
         <div className="genre-card">
             <h1 className="genre-title">Комедия</h1>
             <h2 className="genre-count">90k+ фильмов</h2>
         </div>
+        </Link>  
     </div>
 </div>
     <div className='block3-2-1'>
@@ -86,29 +97,30 @@ function Home2() {
     </div>
     <div className="con">
   <div className="slider-wrapper">
-    <div
-      className="slider"
-      style={{ transform: `translateX(-${(currentIndex * 100) / slidesToShow}%)` }}
+    <div className="slider" style={{ transform: `translateX(-${(currentIndex * 100) / slidesToShow}%)` }}
     >
-      {movies.map((item) => (
-        <div key={item.id} className="slide">
-          <div className="card">
-            <div className="rating">{item.rating}</div>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-              alt={item.title}
-            />
-            <h2 className="movie-title">{item.name}</h2>
-            <p className="movie-year">{item.year}</p>
-          </div>
+          {movies.map((item) => (
+            <div key={item.id} className="slide">
+              <div className="card">
+                <div className="rating">{item.rating}</div>
+                <Link to={`/movie/${item.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                  alt={item.title}
+                  style={{ cursor: 'pointer' }}
+                />
+                </Link>
+                <h2 className="movie-title">{item.name}</h2>
+                <p className="movie-year">{item.year}</p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
 
-    <button onClick={prevSlide} className="nav-button left">Prev</button>
-    <button onClick={nextSlide} className="nav-button right">Next</button>
-  </div>
-</div>
+        <button onClick={prevSlide} className="nav-button left">Prev</button>
+        <button onClick={nextSlide} className="nav-button right">Next</button>
+      </div>
+    </div>
 
 </>
   )
