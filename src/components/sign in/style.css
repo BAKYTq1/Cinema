@@ -1,13 +1,17 @@
 .signIn{
-    width: 1126px;
-height: 536px;
+    width: 1026px;
+height: 506px;
 display: flex;
 border-radius: 12px;
 margin: 0 auto;
+margin-top: 100px;
+margin-bottom: 100px;
+border-radius: 12px;
+box-shadow: 15px 15px 15px 15px rgba(22, 21, 17, 0.983);
 }
 .Sign-r{
     width: 563px;
-height: 536px;
+height: 100%;
 color: white;
 text-align: center;
 background-color: #212121;
@@ -34,14 +38,18 @@ text-align: center;
  width: 217px;
  height: 42px;
  border-radius: 50px;
- background-color: #EF4234;
+ background-color: #ba2e24;
  border: none;
  color: white;
  font-size: 17px;
+ margin-top: 30px;
+}
+.Sign-r div button:hover{
+ background-color: #EF4234;
 }
 .item-signIn2{
     width: 563px;
-    height: 536px;
+    height: 100%;
     background-color:  black;
     display: flex;
     justify-content: center;
@@ -53,12 +61,13 @@ text-align: center;
 }
 .Voyti{
     text-align: center;
-    width: 350px;
+    width: 350px !important;
     gap: 36px;
     display: flex;
     justify-content: center;
-    /* align-self: center; */
+    align-self: center;
     flex-wrap: wrap;
+    margin: 0 auto;
     margin-top: -100px;
 }
 .Voyti input{
@@ -73,13 +82,13 @@ border-radius: 10px;
 .Voyti button{
     width: 95px;
     height: 42px;
-    background-color: #EF4234;
+    background-color: #ba2e24;
     border-radius: 30px;
     border: none;
     color: white;
     font-size: 16px;
     cursor: pointer;
     &&:hover{
-        background-color: #ef4134cc;
+        background-color: #EF4234;
     }
 }

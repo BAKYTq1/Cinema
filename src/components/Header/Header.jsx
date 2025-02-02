@@ -25,7 +25,6 @@ function Header() {
                 <div>
                   <Link to='signup'>
                 <VscAccount />
-                  
                   </Link>
                 </div>
                 <div>

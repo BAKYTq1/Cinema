@@ -2,8 +2,9 @@ import  'react'
 import './style.css'
 import { SiYoutubemusic } from "react-icons/si";
 import SignIn from '../components/sign in/SignIn';
-// import MovieList from './Cinema';
 import Home2 from './Home2'
+import MovieCard from './MovieCard';
+// import MovieList from './Cinema';
 function Home() {
   return (
     <>
@@ -15,16 +16,17 @@ function Home() {
             </div>
         <div className='Home-J'>
             <h1>Джокер </h1>
-            <p>Готэм. Комик Артур Флек живет с больной матерью,<br /> которая с детства учит его «ходить с улыбкой»</p>
+            <p style={{marginTop:'15px'}}>Готэм. Комик Артур Флек живет с больной матерью,<br /> которая с детства учит его «ходить с улыбкой»</p>
         </div>
-        <button>Смотреть <SiYoutubemusic />
+        <button style={{marginTop:'20px'}}>Смотреть <SiYoutubemusic />
         </button>
         </div>
       </section>
     </main>
     {/* <MovieList /> */}
-    <SignIn/>
+    {/* <SignIn/> */}
     <Home2 />
+    <MovieCard />
     </>
   )
 }
