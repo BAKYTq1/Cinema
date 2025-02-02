@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "./Layout/Layout";
-import Home from "./pages/Home";
-import SigneUp from "./components/SigneUp";
-import Profile from "./pages/Profile";
-import SignIn from "./components/sign in/SignIn";
+import Layout from "./Layout/Layout.jsx";
+import Home from "./pages/Home.jsx";
+import SigneUp from "./components/SigneUp.jsx";
+import Profile from "./pages/Profile.jsx";
+import SignIn from "./components/sign in/SignIn.jsx";
 
 export const myRouter = createBrowserRouter([
     {
