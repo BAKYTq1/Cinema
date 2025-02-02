@@ -6,7 +6,11 @@
     /* position: relative; */
     justify-content: center;
     align-items: center;
+
+    margin-bottom: 200px;
+
     margin-bottom: 100px;
+
 }
 .registration-container {
     width: 563px;
@@ -20,7 +24,7 @@
     border: 1px  ;
     border-radius:0 8px 8px 0;
     background: #1A1A1A;
-    height: 430px;
+    height: 500px;
     
   }
   .registration-container-info{
@@ -32,7 +36,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: #212121;
     text-align: center;
-    height: 430px;
+    height: 500px;
 
   }
   
