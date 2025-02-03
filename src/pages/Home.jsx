@@ -1,7 +1,7 @@
 import  'react'
 import './style.css'
 import { SiYoutubemusic } from "react-icons/si";
-import SignIn from '../components/sign in/SignIn';
+// import SignIn from '../components/sign in/SignIn';
 import Home2 from './Home2'
 import MovieCard from './MovieCard';
 // import MovieList from './Cinema';
