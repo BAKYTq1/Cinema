@@ -4,7 +4,6 @@ import Home from "./pages/Home.jsx";
 import SigneUp from "./components/SigneUp.jsx";
 import Profile from "./pages/Profile.jsx";
 import SignIn from "./components/sign in/SignIn.jsx";
-
 export const myRouter = createBrowserRouter([
     {
     path: "/",
