@@ -10,6 +10,7 @@ import MovieDetails from "./pages/MovieDetails";
 import FilterComedy from "./components/FilterPages/FilterComedy";
 import FilterDrama from "./components/FilterPages/FilterDrama";
 import FilterHorror from "./components/FilterPages/FilterHorror";
+import SearchPage from "./components/Search/SearchPage";
 
 
 export const myRouter = createBrowserRouter([
@@ -50,6 +51,10 @@ export const myRouter = createBrowserRouter([
         {
             path: "/filter/horror",
             element: <FilterHorror />
+        },
+        {
+            path: "/search",
+            element: <SearchPage />
         }
     ]
     }
