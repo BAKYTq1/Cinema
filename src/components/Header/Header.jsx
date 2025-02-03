@@ -31,8 +31,7 @@ function Header() {
                   <Link to='profile'>
                 <FaHouseUser />
                   </Link>
-                </div>
-                
+                </div> 
             </div>
       </div>
     </header>

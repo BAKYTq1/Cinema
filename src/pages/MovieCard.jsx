@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const MovieCarousel = () => {
@@ -78,7 +78,7 @@ const MovieCarousel = () => {
           />
         ))}
       </div>
-        <Link><button className="left-[350px] w-[120px] h-[40px] rounded-[36px] bg-[#ba2e24] hover:bg-[#EF4234] absolute top-[250px]">Смотреть</button></Link>
+        <Link to={`/movie/${movie.id}`}><button className="cursor-pointer left-[350px] w-[120px] h-[40px] rounded-[36px] bg-[#ba2e24] hover:bg-[#EF4234] absolute top-[250px]">Смотреть</button></Link>
     </div>
     </div>
   );
