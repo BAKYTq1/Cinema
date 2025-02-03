@@ -2,6 +2,9 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './mirbek.css'
+import { IoChevronBackOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
+
 
 function MovieDetails() {
   const { id } = useParams();
@@ -44,6 +47,9 @@ function MovieDetails() {
       <div className="bg-i m-auto flex flex-col md:flex-row items-center md:items-start gap-6 w-full h-[700px] "
       style={{backgroundImage : `url(https://image.tmdb.org/t/p/w500${movie.backdrop_path})`}}
       >
+              <Link to="/" className="back1-button">
+                <IoChevronBackOutline /> 
+              </Link>
         <div className='mt-[100px] m-auto w-[700px] flex '>
 
         <motion.img
@@ -76,7 +82,7 @@ function MovieDetails() {
 
       <motion.div className="mt-10 w-[400px] m-auto justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
         <h2 className="text-2xl font-semibold mb-4">Трейлеры</h2>
-        <div className="flex gap-4 overflow-x-auto">
+        <div className="flex gap-[90px] overflow-x-auto">
           {videos.map(video => (
             <div key={video.id} className="min-w-[200px] ">
               <iframe
