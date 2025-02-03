@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
 const Profile = () => {
-  const [userData, setUserData] = useState({ firstName: '', lastName: '', email: '', avatar: '' });
+
+  const [userData, setUserData] = useState({ username: '', lastName: '', email: '', avatar: '' });
+  
+
   const [isEditing, setIsEditing] = useState(false);
 
+  
   useEffect(() => {
     const data = localStorage.getItem('registrationData');
     if (data) {
-      setUserData(JSON.parse(data));
+      setUserData(JSON.parse(data)); 
     }
   }, []);
 
   const handleEditToggle = () => {
-    setIsEditing(!isEditing);
+    setIsEditing(!isEditing); 
     if (isEditing) {
       localStorage.setItem('registrationData', JSON.stringify(userData));
     }
@@ -31,36 +35,40 @@ const Profile = () => {
         setUserData(updatedData);
         localStorage.setItem('registrationData', JSON.stringify(updatedData));
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(file); 
     }
   };
+
 
   if (!userData) return <p className="text-center text-white">Нет данных о пользователе.</p>;
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative">
+  
       <button
         onClick={handleEditToggle}
-        className="absolute top-4 right-4 bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition"
+        className=" ml-[550px] mb-[50px] bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition"
       >
         {isEditing ? 'Сохранить' : 'Редактировать профиль'}
       </button>
 
-      <h1 className="text-3xl font-bold mb-2">{`${userData.lastName} ${userData.username}`}</h1>
-      <p className="text-sm text-gray-400 mb-4">{userData.email}</p>
 
-      <div className="flex flex-col items-center space-y-4">
+      <h1 className="text-[40px] font-bold mb-2 ml-[-700px] mt-[-100px]">{`${userData.lastName} ${userData.username}`}</h1>
+
+
+      <div className="flex flex-col items-center space-y-4 mt-[50px]">
+
         <img
           src={userData.avatar || 'https://via.placeholder.com/150'}
           alt="User Avatar"
-          className="w-32 h-32 rounded-full object-cover"
+          className="w-[200px] h-[200px] rounded-full object-cover"
         />
 
         <input
           type="text"
-          name="lastName"
-          placeholder="Last Name"
-          value={userData.lastName}
+          name="username"
+          placeholder="Username"
+          value={userData.username} 
           onChange={handleChange}
           disabled={!isEditing}
           className="bg-gray-800 text-white px-4 py-2 rounded-md w-72 focus:outline-none focus:ring-2 focus:ring-red-500 disabled:opacity-50"
@@ -68,9 +76,9 @@ const Profile = () => {
 
         <input
           type="text"
-          name="firstName"
-          placeholder="First Name"
-          value={userData.username}
+          name="lastName"
+          placeholder="Last Name"
+          value={userData.lastName} 
           onChange={handleChange}
           disabled={!isEditing}
           className="bg-gray-800 text-white px-4 py-2 rounded-md w-72 focus:outline-none focus:ring-2 focus:ring-red-500 disabled:opacity-50"
@@ -85,6 +93,8 @@ const Profile = () => {
           disabled={!isEditing}
           className="bg-gray-800 text-white px-4 py-2 rounded-md w-72 focus:outline-none focus:ring-2 focus:ring-red-500 disabled:opacity-50"
         />
+        
+  
         <div className='bg-gray-800 px-4 py-2 rounded-md'>
           {isEditing && (
             <input

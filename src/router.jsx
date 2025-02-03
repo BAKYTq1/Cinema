@@ -2,9 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from "./pages/Home";
 import SigneUp from "./components/Sign up/SigneUp";
-
 import Profile from "./pages/Profile";
-
 import SignIn from "./components/sign in/SignIn";
 import MovieDetails from "./pages/MovieDetails";
 import FilterComedy from "./components/FilterPages/FilterComedy";

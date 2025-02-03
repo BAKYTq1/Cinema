@@ -24,9 +24,10 @@ display: flex;
 }
 }
 .Sign-r div h1 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 10px;
 }
 .Sign-r div p{
 font-size: 18px;
@@ -52,6 +53,7 @@ text-align: center;
     height: 100%;
     background-color:  black;
     display: flex;
+    margin-top: 50px;
     justify-content: center;
     align-items: center;
 && div{
@@ -62,17 +64,21 @@ text-align: center;
 .Voyti{
     text-align: center;
     width: 350px !important;
-    gap: 36px;
     display: flex;
     justify-content: center;
     align-self: center;
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: -100px;
+    && h1{
+        font-size: 40px;
+        font-weight: 900;
+    }
 }
 .Voyti input{
     padding-left: 15px;
     width: 350px;
+    margin-top: 30px;
 height: 45px;
 background-color: #212121;
 outline: none;
@@ -87,6 +93,7 @@ border-radius: 10px;
     border: none;
     color: white;
     font-size: 16px;
+    margin-top: 20px;
     cursor: pointer;
     &&:hover{
         background-color: #EF4234;
