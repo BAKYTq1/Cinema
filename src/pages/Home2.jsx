@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { FaSearch } from "react-icons/fa";
 import { Cinema } from '../data/Cinema';
 import './mirbek.css';
@@ -6,8 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Home2() {
   const [movies, setMovies] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [, setLoading] = useState(true);
+  const [, setError] = useState(null);
   const [currentCategory, setCurrentCategory] = useState('popular'); // Состояние для текущей категории
   const navigate = useNavigate();
 
